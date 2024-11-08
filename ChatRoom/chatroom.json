@@ -1,0 +1,48 @@
+[
+    {
+      "name": "Alice",
+      "content": "Hello everyone!",
+      "qqNumber": null
+    },
+    {
+      "name": "Bob",
+      "content": "Hi Alice!",
+      "qqNumber": "123456"
+    },
+    {
+      "name": "Me",
+      "content": "Welcome to the group!",
+      "qqNumber": 3271436144
+    },
+    {
+      "name": "Alice",
+      "content": "Hi Bob! How are you? [:image::https://image.jiuci.top/i/2024/10/13/2e0pk.webp::]",
+      "qqNumber": null
+    },
+    {
+      "name": "Bob",
+      "content": "I'm fine, thank you!",
+      "qqNumber": "123456"
+    },
+    {
+      "name": "Me",
+      "content": "Great! Let's talk about something interesting.",
+      "qqNumber": 3271436144
+    },
+    {
+      "name": "Alice",
+      "content": "Sure! What do you have in mind?",
+      "qqNumber": null
+    },
+    {
+      "name": "Bob",
+      "content": "I was thinking about the future of artificial intelligence.",
+      "qqNumber": "123456"
+    },
+    {
+      "name": "Me",
+      "content": "That sounds interesting!",
+      "qqNumber": 3271436144
+    }
+ ]
+  

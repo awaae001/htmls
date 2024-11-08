@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="chat"></div>
+    <script src="/main.js"></script>
+    <script>
+          chatroom.init ({
+            jsonFilePath: "/chatroom.json",  // JSON 文件的路径，必须提供
+            chatroomName: "chat",
+            MyAvatar: "https://image.m-c.top/?/images/2024/10/01/8tB9C0gYz5/eb0c7477f97f6d64f86c3cd3b4a1e7a5.jpg",  // 聊天室的容器 ID，必须提供
+            title: "呓语梦轩-NetWork",  // 可选的聊天室标题
+          })
+        </script>
+
+    <div id="chat-2"></div>
+    <script src="/main.js"></script>
+    <script>
+  chatroom.init ({
+    jsonFilePath: "/chatroom - 1.json",  // JSON 文件的路径，必须提供
+    chatroomName: "chat-2",
+    MyAvatar: "https://image.m-c.top/?/images/2024/10/01/8tB9C0gYz5/eb0c7477f97f6d64f86c3cd3b4a1e7a5.jpg",  // 聊天室的容器 ID，必须提供
+    title: "呓语梦轩-NetWork",  // 可选的聊天室标题
+  })
+</script>
+  </body>
+</html>
