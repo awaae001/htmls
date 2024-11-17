@@ -1,3 +1,7 @@
+window.openChatWindow = function(url) {
+  window.open(url, '_blank', 'width=450,height=650,scrollbars=yes');
+}
+
 const chatroom = {
   // 定义用于存储用户头像的 Map 和头像索引
   userAvatarMap: new Map(),
@@ -98,15 +102,61 @@ const chatroom = {
     `;
   },
 
-  // 解析聊天内容，将 [:image::url::] 替换为 <img> 标签
+
   parseContent: function (content) {
     const imagePattern = /\[:image::(https?:\/\/[^\s]+?)::\]/g;
-
-    // 查找并替换图片标记为 <img> 标签
-    return content.replace(imagePattern, function (match, p1) {
+    const chatPattern = /\[:chat:\(([^)]+)\)::([^\s]+?)::\]/g;
+    const linkPattern = /\[:a::(https?:\/\/[^\s]+?)::\]/g;
+    const callPattern = /\[:call::@([^:]+?)::\]/g;
+    const repPattern = /\[:rep:\[([^\]]+)\]:(.*?)::\]/g;  // 新增的模式，用于引用内容
+    
+    // 处理图片
+    content = content.replace(imagePattern, function (match, p1) {
       return `<img class="chatMedia" src="${p1}" alt="Image" />`;
     });
-  },
+  
+    // 处理聊天记录
+    content = content.replace(chatPattern, function (match, title, jsonFilePath) {
+      const encodedTitle = encodeURIComponent(title);
+      const encodedJsonFilePath = encodeURIComponent(jsonFilePath);
+      const chatLink = `http://localhost:4000/Chatroom/?jsonFilePath=${encodedJsonFilePath}&title=${encodedTitle}`;
+      return `
+        <div class="chatQuoteCard">
+            <div class="chatQuoteTetle">
+            <i class="fa fa-database"></i>
+            <span>转发的聊天记录</span>
+            </div>
+            <a class="chatMessage" onclick="openChatWindow('${chatLink}')">转发自：${title}</a>
+        </div>
+      `;
+    });
+  
+    // 处理链接
+    content = content.replace(linkPattern, function (match, p1) {
+      return `<a href="${p1}" class="chatLink" target="_blank">${p1}</a>`;
+    });
+  
+    // 处理@user调用
+    content = content.replace(callPattern, function (match, username) {
+      return `<span class="chatCall">@${username}</span>`;  // 显示为@username
+    });
+  
+    // 处理引用内容
+    content = content.replace(repPattern, function (match, username, quotedContent) {
+      return `
+        <div class="chatQuote">
+          <div class="quoteUser">
+          <i class="fa fa-share-square-o"></i>
+          <span>${username}</span>
+          </div>
+          <span class="quotedMessage">${quotedContent}</span>
+        </div>
+      `;
+    });
+  
+    return content;
+  }
+  ,  
 
   // 分配默认头像
   assignAvatar: function (name) {

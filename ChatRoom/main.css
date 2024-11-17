@@ -1,46 +1,65 @@
+:root {
+    --primary-color: rgb(43, 105, 100);
+    --secondary-color: rgb(236, 236, 236);
+    --text-color: rgb(255, 255, 255);
+    --highlight-color: rgb(63, 153, 146);
+    --border-color: rgba(49, 56, 66, 0.193);
+    --avatar-size: 40px;
+    --padding-main: 20px;
+    --radius-main: 10px;
+}
+
 .chatContainer {
     overflow: hidden;
     width: 100%;
-    border: 3px solid rgb(51, 99, 63);
+    border: 3px solid var(--primary-color);
     border-radius: 8px;
+    background-color: var(--secondary-color);
 }
 
 .chatBoxTitle {
     display: flex;
-    justify-content: flex-start;
-    background: rgb(43, 105, 100);
-    padding: 10px 10px;
-    color: var(--white);
-    align-items: center;
     justify-content: space-between;
+    background: var(--primary-color);
+    padding: 10px;
+    color: var(--text-color);
+    align-items: center;
 
     i {
         padding-top: 4px;
         font-size: 16px;
         margin: 0 10px;
-        color: rgb(255, 255, 255);
+        color: var(--text-color);
+        cursor: pointer;
     }
 
     .chatTitleText {
         flex: 1;
         font-size: 16px;
         white-space: nowrap;
-        /* 不换行 */
         overflow: hidden;
-        /* 超出部分隐藏 */
         text-overflow: ellipsis;
-        /* 显示省略号 */
-        color: white;
+        color: var(--text-color);
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .chatTitleText:hover {
+        color: var(--secondary-color);
     }
 }
 
 .chatBox {
-    padding: 20px 30px;
+    padding: var(--padding-main) 30px;
     box-sizing: border-box;
-    background-color: rgb(236, 236, 236);
+    background-color: var(--secondary-color);
 
     @media (max-width: 768px) {
-        padding: 20px 10px;
+        padding: var(--padding-main) 10px;
+    }
+
+    @media (max-width: 480px) {
+        padding: var(--padding-main) 5px;
     }
 }
 
@@ -48,11 +67,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin: 20px 0;
+    margin: var(--padding-main) 0;
 
     .chatAvatar {
-        width: 40px;
-        height: 40px;
+        width: var(--avatar-size);
+        height: var(--avatar-size);
         border-radius: 50% !important;
         margin: 5px 10px 0 0 !important;
     }
@@ -63,25 +82,43 @@
         width: calc(100% - 110px);
 
         .chatContent {
-            background: rgb(233, 233, 233);
-            border: 1px solid rgba(49, 56, 66, 0.193);
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
             padding: 10px;
-            border-radius: 0 10px 10px 10px;
+            border-radius: 0 var(--radius-main) var(--radius-main) var(--radius-main);
             width: fit-content;
             max-width: 100%;
             word-wrap: break-word;
+            transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+            
+            .chatCall{
+                color: rgb(4, 147, 243);
+                font-weight: bold;
+            }
+        }
+
+        .chatContent:hover {
+            background: var(--primary-color);
+            color: var(--text-color);
         }
 
         .chatName {
-            color: rgb(43, 105, 100);
+            color: var(--primary-color);
         }
 
         .chatMedia {
             max-width: 100%;
             height: auto;
             margin-top: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            border-radius: 8px;
         }
 
+        .chatMedia:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
     }
 
     &.me {
@@ -96,18 +133,97 @@
 
             .chatContent {
                 background: rgb(248, 251, 255);
-                border-radius: 10px 0 10px 10px;
+                border-radius: var(--radius-main) 0 var(--radius-main) var(--radius-main);
+                transition: none;
+                /* 移除悬停效果 */
+
+                .chatCall{
+                    color: rgb(225, 160, 8);
+                    font-weight: bold;
+                }
+            }
+
+            .chatContent:hover {
+                background: rgb(248, 251, 255);
+                /* 保持原背景色 */
+                color: inherit;
+                /* 保持文本颜色 */
             }
 
             .chatName {
-                color: rgb(63, 153, 146);
+                color: var(--highlight-color);
             }
+        }
+    }
+}
 
-            .chatMedia {
-                max-width: 100%;
-                height: auto;
-                margin-top: 5px;
-            }
+/* 链接样式 */
+.chatLink {
+    /* color: var(--primary-color); */
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+.chatLink:hover {
+    text-decoration: none;
+    color: var(--highlight-color);
+}
+
+.chatQuoteCard {
+    display: flex;
+    border: 3px solid var(--highlight-color);
+    border-radius: 0 var(--radius-main) var(--radius-main) var(--radius-main);
+    flex-direction: column;
+    align-items: stretch;
+    margin: -12px;
+
+
+    .chatQuoteTetle {
+        background-color: var(--highlight-color);
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+
+        span {
+            padding-left: 64px;
+        }
+
+        i {
+            margin-top: 2px;
+            margin-left: 2px;
+        }
+
+    }
+
+    .chatMessage {
+        /* margin-left: 8px; */
+        margin: 16px 16px;
+    }
+}
+
+.chatQuote{
+    display: flex;
+    border: 3px solid var(--highlight-color);
+    border-radius: 0 var(--radius-main) var(--radius-main) var(--radius-main);
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0px -10px -10px  ;
+    
+    .quoteUser{
+        background-color: var(--highlight-color);
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        
+        span {
+            padding: -16px;
+            font-weight: lighter;
+        }
+
+        i {
+            margin-top: 2px;
+            margin-left: 2px;
+            font-weight: lighter;
         }
     }
 }
