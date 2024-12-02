@@ -53,6 +53,8 @@
     padding: var(--padding-main) 30px;
     box-sizing: border-box;
     background-color: var(--secondary-color);
+    max-height: 900px;
+    overflow: auto;
 
     @media (max-width: 768px) {
         padding: var(--padding-main) 10px;
@@ -61,6 +63,7 @@
     @media (max-width: 480px) {
         padding: var(--padding-main) 5px;
     }
+
 }
 
 .chatItem {
@@ -90,8 +93,8 @@
             max-width: 100%;
             word-wrap: break-word;
             transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
-            
-            .chatCall{
+
+            .chatCall {
                 color: rgb(4, 147, 243);
                 font-weight: bold;
             }
@@ -137,7 +140,7 @@
                 transition: none;
                 /* 移除悬停效果 */
 
-                .chatCall{
+                .chatCall {
                     color: rgb(225, 160, 8);
                     font-weight: bold;
                 }
@@ -201,20 +204,20 @@
     }
 }
 
-.chatQuote{
+.chatQuote {
     display: flex;
     border: 3px solid var(--highlight-color);
     border-radius: 0 var(--radius-main) var(--radius-main) var(--radius-main);
     flex-direction: column;
     align-items: stretch;
-    margin: 0px -10px -10px  ;
-    
-    .quoteUser{
+    margin: 0px -10px -10px;
+
+    .quoteUser {
         background-color: var(--highlight-color);
         display: flex;
         justify-content: space-between;
         color: #fff;
-        
+
         span {
             padding: -16px;
             font-weight: lighter;
@@ -226,4 +229,26 @@
             font-weight: lighter;
         }
     }
+}
+
+
+.systemNotification {
+    text-align: center ; 
+    /* color: var(--primary-color); */
+    background-color: rgb(161, 161, 161);
+    padding: 1px;
+    margin: 20px auto;
+    max-width: 50%;
+    font-style: italic;
+    font-weight: bold;
+    border: 1px  ;
+    border-radius: var(--radius-main);
+
+    .systemContent {
+        /* display: flex; */
+        font-size: 14px;
+        line-height: 1.5;
+        /* text-align: center; */
+    }
+
 }

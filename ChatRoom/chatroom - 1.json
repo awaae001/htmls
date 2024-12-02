@@ -1,33 +1,562 @@
 [
-    {
-      "name": "Alice",
-      "content": "Hello everyone!",
-      "qqNumber": null
-    },
-    {
-      "name": "Bob",
-      "content": "Hi Alice!",
-      "qqNumber": "123456"
-    },
-    {
-      "name": "Me",
-      "content": "Welcome to the group!",
-      "qqNumber": 3271436144
-    },
-    {
-      "name": "Alice",
-      "content": "Hi Bob! How are you? [:image::https://image.jiuci.top/i/2024/10/13/2e0pk.webp::]",
-      "qqNumber": null
-    },
-    {
-      "name": "Bob",
-      "content": "I'm fine, thank you!",
-      "qqNumber": "123456"
-    },
-    {
-      "name": "Me",
-      "content": "Great! Let's talk about something interesting.",
-      "qqNumber": 3271436144
-    }
- ]
-  
+  {
+    "name": "me",
+    "content": "真的没有任何办法了吗?",
+    "avatar": "me"
+  },
+  {
+    "name": "Aliya",
+    "content": "没有了",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "\"宇宙就是这样平静而残酷\"",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "这句话是我刚想出来的",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "别把气氛烘托得这样悲伤，到时候我眼泪出来了你赔吗?",
+    "avatar": "me"
+  },
+  {
+    "name": "Aliya",
+    "content": "原来你是爱哭鬼啊",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "你要是真哭了拍张照发给我",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "开玩笑的",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "好了好了",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "坚强一点吧",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "好可惜啊",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "知道最后",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我都没有亲眼见到你的样子",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "不过",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "这边舷窗似乎能看到太阳系的方向",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "而且……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我们之间相聚的距离好像刚好是1000光年",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "所以我看到的是以前光年前的地球",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "这意味着",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "太阳的光在经过8分钟后照在了你的身上",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "又带着你的模样",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "在宇宙中孤独旅行了1000年最后被我的眼睛捕捉到",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我现在很有可能看到当下的你哦",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "这也太浪漫了，没想到你还有这一手",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "哼哼",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我们可能很早就认识",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "当我们都在仰望星空的时候",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我有可能注视着你的眼睛",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "现在这情况",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "可能是之前你说的、\"Flag\"灵验了吧",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "哈哈哈哈",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "早知道不说了，*",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我们换个话题",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "来玩个小游戏吧",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "一直说自己喜欢什么东西",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "直到另一方说不出来",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我先来",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "额，兔子狗",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "星空",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我想想",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "海獭",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "那就",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "Ryoko",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "Aliya",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "等等",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "你是不是说了我的名字？",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "你……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "难道……",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "没听清楚？我再说一遍吧，我喜欢Aliya!",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "笨蛋",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "现在说这个会不会太晚了？",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "哈哈哈",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "不过",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我很高兴哦",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "啊",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "不行",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "眼泪……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "肯定是因为二氧化碳堆积有点多了",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "脑袋也开始有点晕了",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "看样子是时候说再见了呢……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "一定要记得我啊",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "当你遇到下一个Aliya的时候",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "就用风信子作为再次相遇的暗号吧",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我会牢牢记住的",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "那就拜托你了哦",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "时间所剩不多了",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "别愁眉苦脸的",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "[:image::https://pic.awaae001.top/%E4%BA%BA%E8%A8%80%E5%A0%82/2024/05(aliya)/ChatMessage/one/bye_a7fcdac2.webp::]",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我不希望只是因为短暂的离别弄的这么悲伤",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "相信我",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我们会再次重逢的！",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "害，本来想比个耶的",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "但右手抬不起来……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "先不说这个了",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "其实……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "刚刚你说的喜欢",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我想我没办法回应你",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "如果你有机会和下一个Aliya相处的话",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我想她会很乐意吧",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "再过几个月",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "可能会有打捞船过来",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "你和这个时代的联系远远还未断开",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我喘不上气了",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "关掉心率显示HRM吧",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "我不愿意让你……",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "亲眼看到我的离开",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "这是我最后的请求",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "谢谢你陪我到最后",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "再会了",
+    "avatar": null
+  },
+  {
+    "name": "Aliya",
+    "content": "……",
+    "avatar": null
+  },
+  {
+    "name": "sys",
+    "content": "[警告：Aliya失去生命反应]",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "我不接受这样的结局！",
+    "avatar": null
+  },
+  {
+    "name": "sys",
+    "content": "[滴！]",
+    "avatar": null
+  },
+  {
+    "name": "sys",
+    "content": "[解码完成]",
+    "avatar": null
+  },
+  {
+    "name": "sys",
+    "content": "[曲率引擎的密钥是]",
+    "avatar": null
+  },
+  {
+    "name": "sys",
+    "content": "[0XA89BC52E]",
+    "avatar": null
+  },
+  {
+    "name": "sys",
+    "content": "[请尽快记录]",
+    "avatar": null
+  },
+  {
+    "name": "sys",
+    "content": "[系统即将关闭]",
+    "avatar": null
+  },
+  {
+    "name": "me",
+    "content": "[初始化连接]",
+    "avatar": null
+  }
+]
