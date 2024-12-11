@@ -60,53 +60,73 @@ const chatroom = {
     return `<div class="chatContainer">${titleHtml}<div class="chatBox">${content}</div></div>`;
   },
 
-  // 生成聊天内容
-  generateChatContent: function (chatData, myAvatar) {
+  generateChatContent: function (chatData, myAvatar, hideAvatar) {
     let content = '';
-    chatData.forEach(chatItem => {
-      content += this.generateChatItem(chatItem, myAvatar);
-    });
-    return content;
-  },
+    const sysProcessed = new Set(); // 用于标记已经渲染过的 sys
 
-  // 生成单条聊天记录的 HTML
-  generateChatItem: function (chatItem, myAvatar) {
-    let name = chatItem.name ? chatItem.name.trim() : "未知";
-    let content = chatItem.content ? chatItem.content.trim() : "无内容";
-    // let qqNumber = chatItem.qqNumber || null;
+    chatData.forEach((chatItem) => {
+        if (chatItem.name && chatItem.name.toLowerCase() === 'sys') {
+            // 如果是 sys 类型的记录，先渲染通知
+            content += this.generateSystemNotification(chatItem);
+
+            // 将对应的 sys 记录标记为已经处理过，避免重复渲染
+            sysProcessed.add(chatItem.content); // 使用 content 或其他唯一标识作为标记
+        } else if (!sysProcessed.has(chatItem.content)) {
+            // 非 sys 类型的记录，如果没有被标记为处理过，才渲染
+            content += this.generateChatItem(chatItem, myAvatar, hideAvatar);
+        }
+    });
+
+    return content;
+},
+
+generateChatItem: function (chatItem, myAvatar, hideAvatar) {
+    let name = chatItem.name ? chatItem.name.trim() : '未知';
+    let content = chatItem.content ? chatItem.content.trim() : '无内容';
     let avatar = chatItem.avatar || null;
 
-    // 判断是否是 "Me" 的消息
-    const isMe = name.toLowerCase() === "me";
+    const isMe = name.toLowerCase() === 'me';
     const chatName = isMe ? '我' : name;
-    const chatClass = isMe ? "me" : "";
+    const chatClass = isMe ? 'me' : '';
 
     let avatarUrl;
-
-    // 判断头像来源
     if (isMe) {
-      avatarUrl = myAvatar; // 使用用户提供的我的头像
+        avatarUrl = myAvatar;
     } else if (avatar && avatar.startsWith('http')) {
-      avatarUrl = avatar; // 如果是 URL 类型的头像
-    } else if (qqNumber) {
-      avatarUrl = `https://q1.qlogo.cn/g?b=qq&nk=${qqNumber}&s=100`; // 如果是 QQ 号类型
+        avatarUrl = avatar;
+    } else if (avatar && !isNaN(Number(avatar))) {
+        avatarUrl = `https://q1.qlogo.cn/g?b=qq&nk=${avatar}&s=100`;
     } else {
-      avatarUrl = this.assignAvatar(name); // 默认头像
+        avatarUrl = this.assignAvatar(name);
     }
 
-    // 解析内容，替换标记为 HTML
+    const avatarHTML = hideAvatar
+        ? ''
+        : `<img class="chatAvatar no-lightbox" src="${avatarUrl}" onerror="this.src='https://via.placeholder.com/100';">`;
+
     content = this.parseContent(content);
 
-    return ` 
-      <div class="chatItem ${chatClass}">
-        <img class="chatAvatar no-lightbox" src="${avatarUrl}" onerror="this.src='https://via.placeholder.com/100';">
-        <div class="chatContentWrapper">
-          <b class="chatName">${chatName}</b>
-          <div class="chatContent">${content}</div>
+    return `
+        <div class="chatItem ${chatClass}">
+            ${avatarHTML}
+            <div class="chatContentWrapper">
+                <b class="chatName">${chatName}</b>
+                <div class="chatContent">${content}</div>
+            </div>
         </div>
-      </div>
     `;
-  },
+},
+
+generateSystemNotification: function (chatItem) {
+    let content = chatItem.content ? chatItem.content.trim() : '无内容';
+    content = this.parseContent(content);
+
+    return `
+        <div class="systemNotification">
+            <div class="systemContent">${content}</div>
+        </div>
+    `;
+},
 
   // 解析聊天内容，将标记替换为 HTML
   parseContent: function (content) {
