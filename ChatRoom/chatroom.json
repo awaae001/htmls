@@ -1,48 +1,52 @@
 [
-    {
-      "name": "Alice",
-      "content": "Hello everyone!",
-      "qqNumber": null
+  {
+    "name": "花露水|liushen.top",
+    "content": "这是一个 聊天记录分享器，它可以解析聊天记录并生成HTML部分插入文章流",
+    "avatar": "3162475700"    
+  },
+  {
+    "name": "me",
+    "content": "是的，它还有许多原版没有的功能",
+    "avatar": "me"
+  },
+  {
+    "name": "Me",
+    "content": "比如：我要提醒某人的@功能： [:call::@花露水::]",
+    "avatar": 3271436144
+  },
+  {
+    "name": "花露水|liushen.top",
+    "content": "用外挂标签版本修改而来，移除了外挂标签的前置组件，目前只需要你的浏览器可以运行js代码就可以使用<br>改版前在这里：[:a::https://gist.liushen.fun/LiuShen/Hexo-butterfly-tag-chat::]",
+    "avatar": "3162475700"
+  },
+  {
+    "name": "me",
+    "content": "还支持比如：嵌套的聊天记录",
+    "avatar": "123456"
+  },
+  {
+    "name": "me",
+    "content": "[:chat:(聊天记录)::https://link.m-c.top/chatRoom/howToAsk/chatroom.json::]",
+    "avatar": null
+  },
+  {
+    "name": "Sci_qud",
+    "content": "[:image::https://pic.awaae001.top/bg.webp::]",
+    "avatar": "3341659982"
+  },
+  {
+      "name": "Sci_qud",
+      "content": "还支持分享你喜欢的图片",
+      "avatar": "3341659982"
     },
-    {
-      "name": "Bob",
-      "content": "Hi Alice!",
-      "qqNumber": "123456"
-    },
-    {
-      "name": "Me",
-      "content": "Welcome to the group!",
-      "qqNumber": 3271436144
-    },
-    {
-      "name": "Alice",
-      "content": "Hi Bob! How are you? [:image::https://image.jiuci.top/i/2024/10/13/2e0pk.webp::]",
-      "qqNumber": null
-    },
-    {
-      "name": "Bob",
-      "content": "I'm fine, thank you!",
-      "qqNumber": "123456"
-    },
-    {
-      "name": "Me",
-      "content": "Great! Let's talk about something interesting.",
-      "qqNumber": 3271436144
-    },
-    {
-      "name": "Alice",
-      "content": "Sure! What do you have in mind?",
-      "qqNumber": null
-    },
-    {
-      "name": "Bob",
-      "content": "I was thinking about the future of artificial intelligence.",
-      "qqNumber": "123456"
-    },
-    {
-      "name": "Me",
-      "content": "That sounds interesting!",
-      "qqNumber": 3271436144
-    }
- ]
-  
+  {
+    "name": "me",
+    "content": "还有选中的回复功能，虽然这引用的框有点太丑了[:rep:[我]:比如：我要提醒某人的@功能： @花露水::]",
+    "avatar": null
+  },
+  {
+    "name": "Bob",
+    "content": "[:chat:(聊天记录)::https://link.m-c.top/chatRoom/howToAsk/chatroom.json::]",
+    "avatar": "123456"
+  }
+]

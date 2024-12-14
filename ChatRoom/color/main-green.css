@@ -165,7 +165,6 @@
     /* color: var(--primary-color); */
     text-decoration: underline;
     transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-    color: var(--border-color);
 }
 
 .chatLink:hover {

@@ -1,8 +1,8 @@
 :root {
-    --primary-color: rgb(43, 105, 100);
-    --secondary-color: rgb(236, 236, 236);
+    --primary-color: rgb(29, 36, 35);
+    --secondary-color: rgb(255, 255, 255);
     --text-color: rgb(255, 255, 255);
-    --highlight-color: rgb(63, 153, 146);
+    --highlight-color:rgb(59, 74, 72);
     --border-color: rgba(49, 56, 66, 0.193);
     --avatar-size: 40px;
     --padding-main: 20px;
@@ -165,7 +165,6 @@
     /* color: var(--primary-color); */
     text-decoration: underline;
     transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-    color: var(--border-color);
 }
 
 .chatLink:hover {
