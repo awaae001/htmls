@@ -145,7 +145,7 @@ generateSystemNotification: function (chatItem) {
     content = content.replace(chatPattern, (match, title, jsonFilePath) => {
       const encodedTitle = encodeURIComponent(title);
       const encodedJsonFilePath = encodeURIComponent(jsonFilePath);
-      const chatLink = `http://localhost:4000/Chatroom/?jsonFilePath=${encodedJsonFilePath}&title=${encodedTitle}`;
+      const chatLink = `https://blog.awaae001.top/Chatroom/?jsonFilePath=${encodedJsonFilePath}&title=${encodedTitle}`;
       return `
         <div class="chatQuoteCard">
           <div class="chatQuoteTitle">
